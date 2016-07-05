@@ -19,7 +19,7 @@ PATH = "mykodibuildwizard"
 
     
 def CATEGORIES():
-    link = OPEN_URL('http://ghosttvbuilds.esy.es/Wizard/Wizard/wizard.html').replace('\n','').replace('\r','')
+    link = OPEN_URL('https://github.com/GhostTV/plugin.video.mykodibuildwizard/blob/master/wizard.html').replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
         addDir(name,url,1,iconimage,fanart,description)
